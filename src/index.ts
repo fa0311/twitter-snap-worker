@@ -17,7 +17,7 @@ export default {
 
 		const cache = caches.default;
 		const cacheKey = request.url;
-		let res = await cache.match(cacheKey);
+		const res = await cache.match(cacheKey);
 
 		if (res) {
 			return res;
@@ -34,13 +34,13 @@ export default {
 				fonts: [
 					{
 						name: "Noto Sans JP",
-						data: await loadGoogleFont({ family: "Noto Sans JP", weight: 400 }),
+						data: await loadGoogleFont({ family: "Noto Sans JP", weight: 400, text: undefined }),
 						weight: 400,
 						style: "normal"
 					},
 					{
 						name: "Noto Sans JP",
-						data: await loadGoogleFont({ family: "Noto Sans JP", weight: 700 }),
+						data: await loadGoogleFont({ family: "Noto Sans JP", weight: 700, text: undefined }),
 						weight: 700,
 						style: "normal"
 					},
