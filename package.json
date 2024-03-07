@@ -9,7 +9,14 @@
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20240222.0",
+    "@types/react": "^18.2.64",
     "typescript": "^5.0.4",
     "wrangler": "^3.0.0"
+  },
+  "dependencies": {
+    "graphemesplit": "^2.4.4",
+    "react": "^18.2.0",
+    "twitter-openapi-typescript": "^0.0.30",
+    "workers-og": "^0.0.23"
   }
 }
