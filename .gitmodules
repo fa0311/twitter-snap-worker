@@ -1,3 +1,3 @@
-[submodule "src/twitter-snap"]
-	path = src/twitter-snap
-	url = https://github.com/fa0311/twitter-snap
+[submodule "workers-og-plus"]
+	path = workers-og-plus
+	url = https://github.com/fa0311/workers-og-plus
