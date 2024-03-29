@@ -1,3 +1,6 @@
 [submodule "workers-og-plus"]
 	path = workers-og-plus
 	url = https://github.com/fa0311/workers-og-plus
+[submodule "twitter-snap-core"]
+	path = twitter-snap-core
+	url = https://github.com/fa0311/twitter-snap-core

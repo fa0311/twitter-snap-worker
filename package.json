@@ -1,22 +1,25 @@
 {
-  "name": "twitter-snap-worker",
-  "version": "0.0.0",
-  "private": true,
-  "scripts": {
-    "deploy": "wrangler deploy",
-    "dev": "wrangler dev",
-    "start": "wrangler dev"
-  },
-  "devDependencies": {
-    "@cloudflare/workers-types": "^4.20240222.0",
-    "@types/react": "^18.2.64",
-    "typescript": "^5.0.4",
-    "wrangler": "^3.0.0"
-  },
-  "dependencies": {
-    "graphemesplit": "^2.4.4",
-    "react": "^18.2.0",
-    "twitter-openapi-typescript": "^0.0.30",
-    "workers-og": "file:workers-og-plus/packages/workers-og"
-  }
+	"name": "twitter-snap-worker",
+	"version": "0.0.0",
+	"private": true,
+	"scripts": {
+		"dev": "wrangler dev src/index.ts",
+		"deploy": "wrangler deploy --minify src/index.ts"
+	},
+	"dependencies": {
+		"@cloudflare/pages-plugin-vercel-og": "^0.1.1",
+		"hono": "^4.1.5",
+		"twitter-openapi-typescript": "^0.0.32",
+		"twitter-snap-core": "^0.0.30"
+	},
+	"devDependencies": {
+		"@cloudflare/workers-types": "^4.20240222.0",
+		"wrangler": "^3.0.0",
+		"@vercel/og": "^0.6.2"
+	},
+	"pnpm": {
+		"overrides": {
+			"fluent-ffmpeg": "file:fluent-ffmpeg"
+		}
+	}
 }
