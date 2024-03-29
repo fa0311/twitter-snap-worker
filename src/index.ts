@@ -29,8 +29,8 @@ app.get('/:id', async (c) => {
 			ct0: c.env!.CSRF_TOKEN as string,
 			auth_token: c.env!.AUTH_TOKEN as string,
 		});
-		const tweet = await api.getDefaultApi().getTweetResultByRestId({
-			tweetId: id,
+		const tweet = await api.getTweetApi().getTweetDetail({
+			focalTweetId: id,
 		});
 
 		const Theme = (Object.entries(themeList).find(([k, _]) => k === theme) ?? Object.entries(themeList)[0])[1];
@@ -42,7 +42,7 @@ app.get('/:id', async (c) => {
 
 		const fonts = await getFonts();
 
-		const data = await render.imageRender({ data: tweet.data! });
+		const data = await render.imageRender({ data: tweet.data.data[0]! });
 
 		const res = new ImageResponse(data, {
 			width: 650,
