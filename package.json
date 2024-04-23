@@ -8,7 +8,7 @@
 	},
 	"dependencies": {
 		"@cloudflare/pages-plugin-vercel-og": "^0.1.1",
-		"hono": "^4.1.5",
+		"hono": "^4.2.7",
 		"twitter-openapi-typescript": "^0.0.32",
 		"twitter-snap-core": "^0.0.30"
 	},
